@@ -1,0 +1,19 @@
+
+component control_acc_convert;
+
+pin in float acc;
+pin in float vel;
+pin in float vel_fb;
+pin in float pos;
+pin in float pos_fb;
+pin in float Kp;
+pin in float Kd;
+
+pin out float acc_control;
+
+variable double old;
+
+function _;
+license "GPL";
+;;
+acc_control = acc + Kp*(vel - vel_fb) + Kd*(pos - pos_fb);

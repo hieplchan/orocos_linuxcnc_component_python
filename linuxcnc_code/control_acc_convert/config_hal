@@ -1,0 +1,62 @@
+halcompile --install control_acc_convert.comp 
+
+
+
+
+loadrt control_acc_convert count=6
+
+addf control_acc_convert.0 servo-thread
+addf control_acc_convert.1 servo-thread
+addf control_acc_convert.2 servo-thread
+addf control_acc_convert.3 servo-thread
+addf control_acc_convert.4 servo-thread
+addf control_acc_convert.5 servo-thread
+
+net J0pos control_acc_convert.0.pos
+net J1pos control_acc_convert.1.pos
+net J2pos control_acc_convert.2.pos
+net J3pos control_acc_convert.3.pos
+net J4pos control_acc_convert.4.pos
+net J5pos control_acc_convert.5.pos
+
+net J0pos_fb control_acc_convert.0.pos_fb
+net J1pos_fb control_acc_convert.1.pos_fb
+net J2pos_fb control_acc_convert.2.pos_fb
+net J3pos_fb control_acc_convert.3.pos_fb
+net J4pos_fb control_acc_convert.4.pos_fb
+net J5pos_fb control_acc_convert.5.pos_fb
+
+net J0vel control_acc_convert.0.vel
+net J1vel control_acc_convert.1.vel
+net J2vel control_acc_convert.2.vel
+net J3vel control_acc_convert.3.vel
+net J4vel control_acc_convert.4.vel
+net J5vel control_acc_convert.5.vel
+
+net J0vel_fb control_acc_convert.0.vel_fb
+net J1vel_fb control_acc_convert.1.vel_fb
+net J2vel_fb control_acc_convert.2.vel_fb
+net J3vel_fb control_acc_convert.3.vel_fb
+net J4vel_fb control_acc_convert.4.vel_fb
+net J5vel_fb control_acc_convert.5.vel_fb
+
+net J0acc control_acc_convert.0.acc
+net J1acc control_acc_convert.1.acc
+net J2acc control_acc_convert.2.acc
+net J3acc control_acc_convert.3.acc
+net J4acc control_acc_convert.4.acc
+net J5acc control_acc_convert.5.acc
+
+setp control_acc_convert.0.Kp 1
+setp control_acc_convert.1.Kp 1
+setp control_acc_convert.2.Kp 1
+setp control_acc_convert.3.Kp 1
+setp control_acc_convert.4.Kp 1
+setp control_acc_convert.5.Kp 1
+
+setp control_acc_convert.0.Kd 1
+setp control_acc_convert.1.Kd 1
+setp control_acc_convert.2.Kd 1
+setp control_acc_convert.3.Kd 1
+setp control_acc_convert.4.Kd 1
+setp control_acc_convert.5.Kd 1

@@ -1,0 +1,27 @@
+net m1 inversedynamics.moment1 pyvcp.moment0
+net m2 inversedynamics.moment2 pyvcp.moment1
+net m3 inversedynamics.moment3 pyvcp.moment2
+net m4 inversedynamics.moment4 pyvcp.moment3
+net m5 inversedynamics.moment5 pyvcp.moment4
+net m6 inversedynamics.moment6 pyvcp.moment5
+
+net J0scaled pyvcp.angle0
+net J1scaled pyvcp.angle1
+net J2scaled pyvcp.angle2
+net J3scaled pyvcp.angle3
+net J4scaled pyvcp.angle4
+net J5scaled pyvcp.angle5
+
+net J0velscaled pyvcp.vel0
+net J1velscaled pyvcp.vel1
+net J2velscaled pyvcp.vel2
+net J3velscaled pyvcp.vel3
+net J4velscaled pyvcp.vel4
+net J5velscaled pyvcp.vel5
+
+net J0accscaled pyvcp.acc0
+net J1accscaled pyvcp.acc1
+net J2accscaled pyvcp.acc2
+net J3accscaled pyvcp.acc3
+net J4accscaled pyvcp.acc4
+net J5accscaled pyvcp.acc5

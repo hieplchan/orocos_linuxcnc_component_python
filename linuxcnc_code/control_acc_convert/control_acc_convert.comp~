@@ -1,0 +1,17 @@
+component control_acc_convert "Compute accelerate after Kp, Kd";
+
+pin in float acc;
+pin in float vel;
+pin in float vel_fb;
+pin in float pos;
+pin in float pos_fb;
+pin in float Kp;
+pin in float Kd;
+
+pin out float acc_control;
+
+function _;
+license "GPL";
+;;
+acc_control = acc + Kp*(vel - vel_fb) + Kd*(pos - pos_fb);
+

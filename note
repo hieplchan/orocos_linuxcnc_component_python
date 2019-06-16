@@ -1,0 +1,8 @@
+swig -c++ -python struc.i
+g++ -pipe -O2 -fPIC -c struc.cpp
+g++ -O2 -fPIC -c struc_wrap.cxx -I/usr/include/python2.7
+g++ -shared struc.o struc_wrap.o -o _struc.so
+python main.py
+
+source /home/hiep/linuxcnc-dev/scripts/rip-environment
+loadusr inversedynamics
